@@ -1,0 +1,144 @@
+/* Header.css */
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+ 
+    transform: rotate(15deg);
+  }
+
+
+.name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2d3436;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.nav-link {
+  position: relative;
+  font-size: 1rem;
+  color: #2d3436 !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-resume {
+  background: #e74c3c;
+  color: white !important;
+  border-radius: 8px;
+  padding: 0.6rem 1.8rem !important;
+  margin-left: 1rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu Fixes */
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  height: 2px;
+  width: 24px;
+  background: #2d3436;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 24px;
+  background: #2d3436;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+  transform: translateY(-6px);
+}
+
+.navbar-toggler-icon::after {
+  transform: translateY(6px);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .btn-resume {
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,231 @@
+/* Portfolio.css */
+/* Modern Red Theme Portfolio */
+.portfolio-section {
+  padding: 80px 20px;
+  background: #f8f9fa;
+}
+
+.portfolio-section h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: transparent;
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  position: relative;
+  display: inline-block;
+}
+
+.portfolio-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  border-radius: 2px;
+}
+
+.portfolio-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.portfolio-section .card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: relative;
+  max-height: 450px;
+  display: flex;
+   flex-direction: column;
+   height: 100%;
+   margin-top: 50px;
+}
+
+.portfolio-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(231, 76, 60, 0.15);
+}
+
+.portfolio-section .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid #e74c3c;
+}
+
+.portfolio-section .card-body {
+  padding: 25px;
+  flex-grow: 1;
+
+
+}
+
+.portfolio-section .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 15px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.portfolio-section .card-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.portfolio-section .card-img-top {
+  height: 200px; /* Adjust accordingly */
+  object-fit: cover;
+}
+
+
+/* Project Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn-portfolio {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white !important;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 3px;
+}
+
+.btn-portfolio:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-portfolio i {
+  font-size: 1.1rem;
+}
+
+/* More Projects Section */
+.more-projects {
+  margin-top: 60px;
+  padding: 40px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.more-projects h3 {
+  font-size: 1.8rem;
+  color: #2d3436;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  position: relative;
+  padding-left: 25px;
+}
+
+.more-projects h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: #e74c3c;
+  border-radius: 50%;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-item {
+  background: rgba(231, 76, 60, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border-left: 4px solid #e74c3c;
+}
+
+.project-item:hover {
+  transform: translateX(10px);
+  background: rgba(231, 76, 60, 0.1);
+}
+
+.project-item h4 {
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #e74c3c !important;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.github-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.github-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .card-img-top {
+    height: 180px;
+  }
+  
+  .more-projects {
+    padding: 25px;
+  }
+}

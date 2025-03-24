@@ -1,0 +1,75 @@
+/* Updated DevelopmentActivity.css */
+.activity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.github-widget, .skills-widget {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contribution-grid {
+  display: flex;
+  gap: 4px;
+  margin: 15px 0;
+  justify-content: center;
+}
+
+.contribution-week {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contribution-day {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .contribution-grid {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .contribution-day {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .github-widget, .skills-widget {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contribution-day {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
